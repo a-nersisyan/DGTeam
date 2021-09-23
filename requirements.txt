@@ -1,0 +1,6 @@
+textdistance
+strsimpy
+import_ipynb
+nbimporter
+xgboost==1.2.1
+nltk
