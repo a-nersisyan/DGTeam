@@ -12,19 +12,16 @@ import math
 import matplotlib.pyplot as plt
 import nltk
 from nltk.util import ngrams
-from sklearn.metrics import jaccard_score
 from collections import Counter
-from sklearn.metrics import precision_recall_curve
-from sklearn.metrics import plot_precision_recall_curve
+from sklearn.metrics import precision_recall_curve, plot_precision_recall_curve, jaccard_score
 from strsimpy.jaro_winkler import JaroWinkler
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import LogisticRegression
-from sklearn.ensemble import RandomForestClassifier
+from sklearn.ensemble import RandomForestClassifier, GradientBoostingClassifier, RandomForestClassifier
 from sklearn.neighbors import KNeighborsClassifier
 from sklearn.naive_bayes import GaussianNB
 from sklearn.tree import DecisionTreeClassifier
 import xgboost as xgb
-from sklearn.ensemble import GradientBoostingClassifier, RandomForestClassifier
 from sklearn.feature_extraction.text import CountVectorizer
 from sklearn.metrics.pairwise import cosine_similarity
 from itertools import chain
@@ -571,6 +568,6 @@ else:
         predict_database.official_model(token))
 
 
-#Filler with a breif explanation of what to do
+#Filler with a brief explanation of what to do
 expander = st.beta_expander("FAQ")
 expander.write("Simply input a system name into the query and we'll look for matches within your database!")
